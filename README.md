@@ -34,7 +34,7 @@ One technical issue with the current domain name system is that the root servers
 With ddnrs decentralised public ledger it's possible to have a open,non-complicated , robust, secure and inexpensive domain name system that can power the future internet with iot space.
 
 ### Open Source :
-The ddnrs domain name system and the ddnrs protocol is fully open sourced with MIT licence 
+The ddnrs domain name system and the ddnrs protocol is fully open sourced with Open Bsv licence 
 
 ### Simple : 
 Due to simple and lightweight nature of the  protocol ddnrs provides more degrees of freedom to build complicated utilities on top of it.
