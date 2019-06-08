@@ -57,7 +57,8 @@ With average tx fees on bitcoin blockchain (bsv) being less than $0.002, creatin
 The ddnrs protocol works on top of the bitcoin's op_return transaction. A ddnrs dnr (domain name record) looks like this -
 **op_return < ddnrs prefix > < dnr hex string >**
 
-ddnrs prefix : 1NCSMuVcq33nRDLa5LNGkQY2PgfzMVhPp6 (generated with the bitcom protocol)
+ddnrs prefix utf8 encoded : 1NCSMuVcq33nRDLa5LNGkQY2PgfzMVhPp6 (generated with the bitcom protocol)
+ddnrs prefix hexadecimal  : 314E43534D7556637133336E52444C61354C4E476B5159325067667A4D5668507036
 
 The ddnrs prefix is generated using the bitcom protocol.
 A domain name in ddnrs looks like this -
@@ -72,16 +73,25 @@ It has three components appended with the delimiter '.' .
 ### Data structure rules :
 The ddnrs dnr hex string has the following data structure -
 
-  * 32 bytes of ddnrs prefix
+  * 34 bytes of ddnrs prefix
+      followed by
   * 2 bytes ddnrs version no
+      followed by
   * 8 bytes dnr ID
+      followed by
   * 8 bytes genesis dnr ID (in case of genesis dnr ID, it's value is 0)
+      followed by
   * 128 bytes ext (utf-32)
+      followed by
   * 512 bytes sld (utf-32)
+      followed by
   * 128 bytes sub-ext (utf-32)
+      followeed by
   * 32 bytes hash of the previous data
+      followed by
   * 32 bytes pubkey
-  * signature 
+      followed by
+  * signature of the hash with private key
   
 ### Genesis rules : 
   * All dnr prior to block n is invalid
@@ -94,10 +104,6 @@ The ddnrs dnr hex string has the following data structure -
    * The ddnrs prefix must be 
    * The dnr ID must contain a valid unix timestamp
    * The genesis dnr ID must be unique for each dnr chain
-
-### Cryptography rules : 
-   * The dnr is hashed using sha-256
-   * the hash is sighned using rsa-2048
 
 ### Dnr validation rules : 
    * A dnr is considered valid if it fulfils all the data structure rules && genesis rules && auth rules && cryptography rules
