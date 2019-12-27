@@ -1,0 +1,30 @@
+{
+  "name": "ddnrs",
+  "version": "1.0.0",
+  "description": "a distributed domain name resolution system built on top of bitcoin sv base protocol",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midsummer-sqro2/bitdns.git"
+  },
+  "keywords": [
+    "ddnrs",
+    "dns",
+    "blockchain",
+    "bitcoin",
+    "bitcoin-sv"
+  ],
+  "author": "midsummer-sqro2",
+  "license": "SEE LICENCE IN LICENCE.md",
+  "bugs": {
+    "url": "https://github.com/midsummer-sqro2/bitdns/issues"
+  },
+  "homepage": "https://github.com/midsummer-sqro2/bitdns#readme",
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "utf8": "^3.0.0"
+  }
+}
