@@ -109,7 +109,7 @@ The ddnrs uses JSON syntax to represent a dnr -
 
 ### Cryptography rules : 
    * The dnr is hashed using sha-256
-   * the hash is sighned using rsa-2048
+   * the hash is sighned using rsa-512
 
 ### Dnr validation rules : 
    * A dnr is considered valid if it fulfils all the data structure rules && genesis rules && auth rules && cryptography rules
