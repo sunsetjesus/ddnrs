@@ -82,7 +82,6 @@ The ddnrs uses JSON syntax to represent a dnr -
     
     payload : {
     
-      "prefix" : prefix (STRING),
       "v"      : v (INTEGER),
       "dnr_id" : dnr_id (INTEGER),
       "genesis_dnr_id"  : genesis_dnr_id (INTEGER),
